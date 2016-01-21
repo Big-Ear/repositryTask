@@ -17,8 +17,7 @@
    Sort by: Name <input type="radio" value="name" ng-model="orderProp"> Repository Name  <input type="radio" value="full_name" ng-model="orderProp">
     <div ng-controller="ListPublicRepoCtrl">
       <button ng-click="getList()">Get All Public Repositories</button>
-      <div class="media" ng-repeat="x in list  | filter:query | orderBy:orderProp" >
-         <repo item="x"></repo>
+        <list item="list" ord="orderProp"></list>
       </div>
     </div>
    </div>

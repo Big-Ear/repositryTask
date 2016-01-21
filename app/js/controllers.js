@@ -30,3 +30,17 @@ app.directive('repo',function(){
   }
 
 );
+
+app.directive('list', function(){
+  return{
+  restrict:"E",
+  scope:{
+    item:"=",
+    ord:"="
+
+  },
+  template:' <div class="media" ng-repeat="x in item | orderBy:ord" > <repo item="x"></repo></div>'
+
+
+  }
+});
