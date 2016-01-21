@@ -37,7 +37,6 @@ app.directive('list', function(){
   scope:{
     item:"=",
     ord:"="
-
   },
   template:' <div class="media" ng-repeat="x in item | orderBy:ord" > <repo item="x"></repo></div>'
 
