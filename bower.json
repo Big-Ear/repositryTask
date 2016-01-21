@@ -1,0 +1,21 @@
+{
+  "name": "ang",
+  "description": "",
+  "main": "app.js",
+  "license": "ISC",
+  "moduleType": [
+    "node"
+  ],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "private": true,
+  "dependencies": {
+    "angular": "~1.4.8"
+  }
+}

@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Repository List</title>
+  <script src="lib/angular/angular.js"></script>
+  <script src="js/controllers.js"></script>
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+</head>
+
+<body>
+ <div ng-app="app">
+   <input ng-model="query" class="form-control" placeholder="Search for..." style="width:300px">
+   Sort by: Name <input type="radio" value="name" ng-model="orderProp"> Repository Name  <input type="radio" value="full_name" ng-model="orderProp">
+    <div ng-controller="ListPublicRepoCtrl">
+      <button ng-click="getList()">Get All Public Repositories</button>
+      <div class="media" ng-repeat="x in list  | filter:query | orderBy:orderProp" >
+         <repo item="x"></repo>
+      </div>
+    </div>
+   </div>
+</body>
